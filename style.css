@@ -1,0 +1,265 @@
+* {
+  margin: 0 0;
+  padding: 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  margin: 0 2%;
+  padding: 1%;
+
+  /* width: 100%; */
+  overflow: hidden;
+  top: 0;
+  justify-content: space-between;
+}
+
+nav .nav-left {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+  border-right: 1px solid black;
+  padding-right: 3%;
+}
+.nav-left .nav-links {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+nav .nav-left .nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+}
+nav .nav-left .nav-links a::after {
+  content: "";
+  background-color: tomato;
+  display: block;
+  height: 4px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+nav .nav-left .nav-links a:hover:after {
+  transform: scaleX(1);
+}
+nav .nav-right {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: center;
+  gap: 5%;
+}
+nav img {
+  width: 50px;
+  border-radius: 50%;
+}
+img.menu {
+  display: none;
+}
+
+.menu-bar{
+  width: 20vw;
+  
+ 
+
+}
+.menu-bar .nav-links{
+  display: grid;
+  gap: 1%;
+ 
+  
+}
+.menu-bar .nav-links a {
+  text-decoration: none;
+  color: black;
+  font-family:sans-serif;
+ 
+  position: relative;
+  padding: 15%;
+
+}
+.menu-bar .nav-links a::after {
+  content: "";
+  background-color: tomato;
+  display: block;
+  height: 4px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.menu-bar .nav-links a:hover:after {
+  transform: scaleX(1);
+}
+.hidden{
+  display: none;
+}
+nav .nav-right img{
+  width: 15%;
+}
+/*About*/
+
+.about {
+  display: flex;
+
+  align-items: center;
+  padding: 1%;
+
+  justify-content: space-between;
+  margin: 0 4%;
+}
+.about .about-text {
+  color: black;
+  width: 50%;
+
+  font-family: Rubik, Georgia, "Times New Roman", Times, serif;
+}
+.about .about-text h3,
+.about .about-text h1,
+.about .about-text p {
+  padding: 1% 0;
+  line-height: 1.5rem;
+}
+.about .about-text .container {
+  display: flex;
+  gap: 0;
+}
+.container .box-1 {
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+.container .box-3 {
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.container .box-1,
+.container .box-2,
+.container .box-3 {
+  background-color: tomato;
+  color: white;
+  padding: 2%;
+  text-align: center;
+}
+
+.container .box-2 {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+
+  /* padding: 1%; */
+}
+.about .about-img {
+  /* width: 40%; */
+}
+.about .about-img img {
+  width: 300px;
+  border-radius: 50%;
+}
+.skills {
+  margin: 2%;
+}
+.skills .tech-skills {
+  margin-top: 2%;
+  display: grid;
+  gap: 5%;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+
+  justify-content: center;
+}
+.skills .tech-skills .item {
+  text-align: center;
+  border: none;
+
+  /* background-color:antiquewhite; */
+  background-color: rgba(255, 99, 71, 0.2);
+
+  width: 100%;
+  overflow: hidden;
+  padding: 1% 3%;
+}
+.skills .tech-skills .item img {
+  width: 50%;
+  height: 100px;
+  mix-blend-mode: multiply;
+  object-fit: contain;
+}
+/*project*/
+.projects {
+  margin: 0 2%;
+}
+
+
+.project-grid {
+  display: grid;
+
+  margin: 4%;
+
+  gap: 2%;
+}
+.project-grid .project-item {
+  display: flex;
+  padding: 2%;
+  align-items: center;
+  background-color: #ffcdd2;
+  justify-content: space-between;
+}
+.project-grid .project-item .pro-text ul {
+  list-style-type: "- ";
+}
+.project-grid .project-item .pro-pic img {
+  mix-blend-mode: multiply;
+}
+.project-item .pro-text .pro-skills {
+  margin-top: 2%;
+  display: flex;
+  gap: 3%;
+}
+.pro-skills > button {
+  background-color: white;
+  padding: 1%;
+  border-radius: 10px;
+  border: none;
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    display: grid;
+    text-align: center;
+    gap: 2%;
+  }
+  .about .about-text {
+    width: 100%;
+  }
+  .about .about-text .container {
+    justify-content: center;
+  }
+
+  .project-grid .project-item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .pro-text h3,
+  .pro-text h5 {
+    text-align: center;
+    padding-top: 1%;
+  }
+  nav .nav-right {
+    display: none;
+  }
+  img.menu {
+    display: block;
+  }
+  nav .nav-left{
+    border: none;
+  }
+  .nav-left .nav-links {
+    display: none;
+  
+  }
+  
+}
